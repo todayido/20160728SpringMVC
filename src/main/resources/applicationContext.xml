@@ -7,7 +7,11 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 	
 	<bean id="car" class="test.com.Car">
-		<constructor-arg name="company" value="DEGUO"></constructor-arg>
+		<constructor-arg>
+		  <props>
+		      <prop key=" name="company">DEGUO</prop>
+		  </props>
+		</constructor-arg>
 		<constructor-arg name="brand" value="baoma"></constructor-arg>
 		<constructor-arg name="maxSpeed" value="111111"></constructor-arg>
 	</bean>
